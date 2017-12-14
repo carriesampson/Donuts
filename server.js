@@ -13,7 +13,7 @@ const PORT            = process.env.PORT || 3003;
 //Set mongoose Promise Library
 mongoose.Promise      = global.Promise;
 
-// Connect to Mongo
+//Connect to Mongo
 mongoose.connect ( mongoURI , { useMongoClient: true});
 
 // Error / success
@@ -21,22 +21,21 @@ db.on( 'error', ( err ) => console.log( err.message + ' is Mongod not running?' 
 db.on( 'connected', () => console.log( 'mongo connected: ', mongoURI ));
 db.on( 'disconnected', () => console.log( 'mongo disconnected' ));
 
-// Open the connection to mongo
+//Open the connection to mongo
 db.on( 'open' , ()=>{});
 
-// Middleware
+//Middleware
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON
 
-// Use morgan
+//Use morgan
 app.use ( morgan ( 'tiny' ) );
+//Use express-public
+app.use ( express.static( 'public' ));
 
-app.use( express.static( 'public' ));
-
-
-//Routes
-// const donutsController = require( './controllers/donutsController.js' );
-// app.use ( '/donuts' , donutsController );
+//Controller
+const donutsController = require( './controllers/donuts.js' );
+app.use ( '/donuts', donutsController );
 
 //Listener
 app.listen(PORT, () => console.log('Donuts App running on: ', PORT));
