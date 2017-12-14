@@ -1,6 +1,5 @@
 //Dependencies
 const express         = require ( 'express' );
-const moment          = require ( 'moment' );
 const mongoose        = require ( 'mongoose' );
 const morgan          = require ( 'morgan' );
 const app             = express();
@@ -36,9 +35,8 @@ app.use( express.static( 'public' ));
 
 
 //Routes
-const donutsController = require( './controllers/donutsController.js' );
-app.use ( '/donuts' , donutsController );
+// const donutsController = require( './controllers/donutsController.js' );
+// app.use ( '/donuts' , donutsController );
 
-app.listen( PORT , () =>{
-  console.log( moment().format('MMMM Do YYYY, h:mm:ss a') , '🎉' , 'celebrations happening on port' , PORT);
-});
+//Listener
+app.listen(PORT, () => console.log('Donuts App running on: ', PORT));

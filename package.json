@@ -1,0 +1,27 @@
+{
+  "name": "donuts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0",
+    "pretty-error": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carriesampson/Donuts.git"
+  },
+  "author": "'Carrie Sampson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carriesampson/Donuts/issues"
+  },
+  "homepage": "https://github.com/carriesampson/Donuts#readme"
+}
