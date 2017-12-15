@@ -23,7 +23,7 @@
       </form>
 
       <table>
-        <tr ng-repeat="donut in ctrl.donuts">
+        <tr ng-repeat="donut in ctrl.donuts" ng-class="(donut.eaten ? 'eaten' : '')">
         <p>{{donut.name}}</p>
           <td ng-mouseover="ctrl.chooseOneDonut(donut)" ng-dblclick="ctrl.updateEaten(donut)"> {{ donut.name }} </td>
           <td ng-click="ctrl.deleteDonut( donut._id)">X</td>
