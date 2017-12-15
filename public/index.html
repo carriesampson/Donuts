@@ -1,0 +1,59 @@
+<html ng-app='DonutsApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Donuts App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+  </head>
+  <body ng-controller='donutsController as ctrl'>
+    <div class="header">
+      <h1 class="title">Wholly DONUTS!</h1>
+    </div>
+    <main>
+      <div class="left">
+        <table>
+          <h1 class="ourDonuts">Our Donuts</h1>
+          <h4 class="subtext">Hover for details, click to update</h4>
+          <tr class="table" ng-repeat="donut in ctrl.donuts" ng-class="(donut.eaten ? 'eaten' : '')">
+          <p class="name">{{donut.name}}</p>
+            <td class="delete" ng-click="ctrl.deleteDonut( donut._id)">X</td>
+            <td class= "name"ng-mouseover="ctrl.chooseOneDonut(donut)" ng-dblclick="ctrl.updateEaten(donut)"> {{ donut.name }} </td>
+            <td>{{ donut.likes }}</td>
+            <td ng-click="ctrl.likeDonut(donut)"><img class="icon" ng-src="https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="right">
+        <form class="addForm" ng-submit="ctrl.createDonut()">
+          <h1 class="ourDonuts">Add a Donut!</h1>
+          <input class="field" type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/>
+          <input class="field" type="text" placeholder="Your Name" ng-model="ctrl.createForm.submittedBy"/></br>
+          <input class="field" type="text" placeholder="Ring or Filled?" ng-model="ctrl.createForm.type"/>
+          <input class="field" type="text" placeholder="Frosting? True/False" ng-model="ctrl.createForm.frosting"/><br>
+          <input class="field" type="text" placeholder="Glazed? True/False" ng-model="ctrl.createForm.glaze"/>
+          <input class="field" type="text" placeholder="Sprinkles? True/False" ng-model="ctrl.createForm.sprinkles"/><br>
+          <br>
+          <input class="submit" type="submit" value="Create New Donut">
+        </form>
+      </div>
+    </main>
+    <section>
+      <div class="details">
+        <h1 class="ourDonuts"> <span>THE DONUT:<span> {{ ctrl.donut.name }} </h1>
+        <p class="specs"> <span> Submitted By: </span> {{ ctrl.donut.submittedBy }} </p>
+        <p class="specs"> <span> Donut Type:</span> {{ ctrl.donut.type }}</p>
+        <p class="specs"> <span> Frosting?:</span> {{ ctrl.donut.frosting }}</p>
+        <p class="specs"> <span> Glazed?:</span> {{ ctrl.donut.glaze }}</p>
+        <p class="specs"> <span> Sprinkles?:</span> {{ ctrl.donut.sprinkles }}</p>
+        <p class="specs"> <span> Likes:</span> {{ ctrl.donut.likes }}</p>
+        <p class="specs"> <span> Eaten?</span> {{ ctrl.donut.eaten }}</p>
+      </div>
+    </section>
+    <footer>
+        <h1 class="footText">By GG Gonzalez &amp; Carrie Sampson (c)2017</h1>
+    </footer>
+  </body>
+</html>

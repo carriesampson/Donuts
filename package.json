@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0",
+    "pretty-error": "^2.1.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/carriesampson/Donuts.git"
   },
-  "author": "",
+  "author": "'Carrie Sampson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/carriesampson/Donuts/issues"
