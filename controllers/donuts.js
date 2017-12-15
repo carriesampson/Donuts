@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
 //NEW Route
 router.post('/', async (req, res) => {
   try {
-    const donut = await Donut.create(req.body);
-    res.status(200).json(donut);
+    const addDonut = await Donut.create(req.body);
+    res.status(200).json(addDonut);
   } catch (err) {
     console.log(err);
     res.status(400).json({ err: err.message });
@@ -23,8 +23,8 @@ router.post('/', async (req, res) => {
 //DELETE ROUTE
 router.delete('/:id', async (req, res) => {
   try {
-    const donut = await Donut.findByIdAndRemove(req.params.id);
-    res.status(200).json(donut);
+    const removeDonut = await Donut.findByIdAndRemove(req.params.id);
+    res.status(200).json(removeDonut);
   } catch (err) {
     res.status(400).json({ err: err.message });
   }
@@ -33,8 +33,8 @@ router.delete('/:id', async (req, res) => {
 //UPDATE Route
 router.put('/:id', async (req, res) => {
   try {
-    const donut = await Donut.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    res.status(200).json(donut);
+    const editDonut = await Donut.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    res.status(200).json(editDonut);
   } catch (err) {
     console.log(err);
     res.status(400).json({ err: err.message });
