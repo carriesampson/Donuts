@@ -11,6 +11,32 @@
     {{ctrl.test}}
     {{2+2}}
 
+    <div class="container">
+      <h5> Donuts</h5>
+
+      <form ng-submit="ctrl.createDonut()">
+        <input type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/>
+        <input type="text" placeholder="Your Name" ng-model="ctrl.createForm.submittedBy"/>
+        <input type="submit" value="Create New Donut">
+      </form>
+
+      <table>
+        <tr ng-repeat="donut in ctrl.donuts"
+          <td ng-mouseover="ctrl.chooseOneDonut(donut)"> {{ donut.name }} </td>
+          <td ng-click="ctrl.deleteDonut( Donut._id)">X</td>
+          <td>{{ donut.likes }}</td>
+          <td ng-click="ctrl.likeDonut(donut)"><img src="https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td>
+        </tr>
+      </table>
+
+      <!-- <div class="details">
+         <h3>Donut Info:</h3>
+         <hr>
+         <h4> {{ ctrl.donut.name }} </h4>
+         <h6> <span> Likes:</span> {{ ctrl.donut.likes }}</h4>
+         <p><span> Submitted By: </span> {{ ctrl.donut.submittedBy }} </p>
+       </div>
+    </div> -->
 
 
 
