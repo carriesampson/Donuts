@@ -1,10 +1,14 @@
 body {
   margin: auto;
   background: url("/images/bkgrd.jpg");
+  background-color: rgba(238, 238, 238, 0.85) !important;
+  background-blend-mode: color;
 }
 
-h1 {
-  font-family: sans-serif;
+.header {
+  background-color: seashell;
+  max-width: 600px;
+  text-align: center;
 }
 
 .icon {

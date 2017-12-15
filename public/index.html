@@ -10,8 +10,10 @@
   <body ng-controller='donutsController as ctrl'>
 
     <div class="container">
-      <h1> Donuts</h1>
-
+      <div class="header">
+        <h4 class="byLine">GG &amp; Carrie's</h4>
+        <h1 class="title">Donuts</h1>
+      </div>  
       <form class="addForm" ng-submit="ctrl.createDonut()">
         <h3>Add a Donut</h3>
         <input class="field" type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/><br>
@@ -35,7 +37,6 @@
 
       <div class="details">
         <h3>Donut Info:</h3>
-        <hr>
         <h4> <span>Donut Name:<span> {{ ctrl.donut.name }} </h4>
         <h6> <span> Submitted By: </span> {{ ctrl.donut.submittedBy }} </h6>
         <h6> <span> Donut Type:</span> {{ ctrl.donut.type }}</h6>
