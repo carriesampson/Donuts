@@ -1,15 +1,17 @@
 const app = angular.module('DonutsApp', []);
 //---------------------------
 
-app.controller('MainController', function() {
+app.controller('MainController', ['$http', function($http) {
 //---------------------------
-  this.test = "Hello world!";
-  console.log("App.JS is Connected");
+  // this.test = "Hello world!";
+  // console.log("App.JS is Connected");
 
+    //CREATE ROUTE
     this.createForm = {}
-
+    //SHOW ROUTE
     this.donut = '';
 
+    //CREATE ROUTE - POST REQUEST
     this.createDonut = () => {
       console.log('submit button calls this fxn');
 
@@ -26,13 +28,14 @@ app.controller('MainController', function() {
     }).catch (err => console.log('Catch: ', err));
   }
 
+  //INDEX ROUTE
   this.getDonuts = () => {
     $http({
       method : 'GET',
       url : '/donuts'
     }).then ( response => {
       this.donuts = response.data;
-      this.donut = this.donuts[0];
+      // this.donut = this.donuts[0];
       console.table(this.donuts);
     }, error => {
       console.error(error.message);
@@ -95,4 +98,4 @@ app.controller('MainController', function() {
     }).catch ( err => console.error ('Catch:', err))
   }
 
-}); // close app controller
+}]); // close app controller
