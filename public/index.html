@@ -6,10 +6,7 @@
     <script src="./js/app.js"></script>
 
   </head>
-  <body ng-controller='MainController as ctrl'>
-    <!--AngularJS Testing-->
-    {{ctrl.test}}
-    {{2+2}}
+  <body ng-controller='donutsController as ctrl'>
 
     <div class="container">
       <h5> Donuts</h5>
@@ -17,6 +14,10 @@
       <form ng-submit="ctrl.createDonut()">
         <input type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/>
         <input type="text" placeholder="Your Name" ng-model="ctrl.createForm.submittedBy"/>
+        <input type="text" placeholder="Ring or Filled?" ng-model="ctrl.createForm.type"/>
+        <input type="text" placeholder="Frosting - true or false?" ng-model="ctrl.createForm.frosting"/>
+        <input type="text" placeholder="Glazed - true or false?" ng-model="ctrl.createForm.glaze"/>
+        <input type="text" placeholder="Sprinkles - true or false?" ng-model="ctrl.createForm.sprinkles"/>
         <input type="submit" value="Create New Donut">
       </form>
 
@@ -25,7 +26,7 @@
           <td ng-mouseover="ctrl.chooseOneDonut(donut)"> {{ donut.name }} </td>
           <td ng-click="ctrl.deleteDonut( Donut._id)">X</td>
           <td>{{ donut.likes }}</td>
-          <td ng-click="ctrl.likeDonut(donut)"><img src="https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td>
+          <td ng-click="ctrl.likeDonut(donut)"><img src=url"https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td>
         </tr>
       </table>
 
