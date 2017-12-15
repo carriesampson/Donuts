@@ -20,7 +20,7 @@ app.controller('donutsController', ['$http', function($http) {
         url : '/donuts',
         data : this.createForm
       }).then( response => {
-        this.donuts.push(response.data);
+        this.donut.push(response.data);
         //empties form after submission
         this.createForm = {};
     }, error => {
