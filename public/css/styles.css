@@ -1,0 +1,12 @@
+body {
+  margin: auto;
+  background: url("/images/bkgrd.jpg");
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+.icon {
+  max-height: 15px;
+}

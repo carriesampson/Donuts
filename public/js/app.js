@@ -72,7 +72,7 @@ app.controller('donutsController', ['$http', function($http) {
       url : '/donuts/' + donut._id,
       data : {eaten : donut.eaten}
     }).then ( response => {
-      console.log(response.data.eaten);
+      // console.log(response.data.eaten);
     }, error => {
       console.log(error.message);
     }).catch ( err => console.error ('Catch:', err))
