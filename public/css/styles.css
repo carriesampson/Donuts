@@ -1,16 +1,134 @@
 body {
   margin: auto;
   background: url("/images/bkgrd.jpg");
-  background-color: rgba(238, 238, 238, 0.85) !important;
+  background-color: rgba(238, 238, 238, 0.8) !important;
   background-blend-mode: color;
 }
 
 .header {
+  margin: auto;
   background-color: seashell;
   max-width: 600px;
   text-align: center;
 }
 
+.title {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 64px;
+  padding: 40px;
+  margin-top: 30px;
+  border-bottom: 1px solid black
+}
+
 .icon {
-  max-height: 15px;
+  max-height: 20px;
+  padding-left: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: seashell;
+  border-bottom: 1px solid black;
+  margin-bottom: 70px;
+}
+
+.left {
+ margin-right: 30px;
+}
+
+.right {
+  margin-left: 0px;
+}
+
+.ourDonuts {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subtext {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.name {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.name:hover {
+  transform: scale(1.1);
+}
+
+.delete {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+.delete:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.field {
+  margin: 5px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 14px;
+  min-width: 175px;
+}
+
+.submit {
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: lightblue;
+  padding: 10px;
+
+}
+
+.submit:hover {
+  background-color: lightcyan;
+}
+
+section {
+  margin-top: 15px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  background-color: lightcyan;
+  padding: 20px;
+}
+
+.specs {
+  margin: auto;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 26px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  margin-top: 100px;
+}
+
+.footText {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 26px;
+
+  padding: 30px;
 }
