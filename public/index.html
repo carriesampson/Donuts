@@ -9,24 +9,26 @@
   <body ng-controller='donutsController as ctrl'>
 
     <div class="container">
-      <h5> Donuts</h5>
+      <h1> Donuts</h1>
 
       <form ng-submit="ctrl.createDonut()">
-        <input type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/>
-        <input type="text" placeholder="Your Name" ng-model="ctrl.createForm.submittedBy"/>
-        <input type="text" placeholder="Ring or Filled?" ng-model="ctrl.createForm.type"/>
-        <input type="text" placeholder="Frosting - true or false?" ng-model="ctrl.createForm.frosting"/>
-        <input type="text" placeholder="Glazed - true or false?" ng-model="ctrl.createForm.glaze"/>
-        <input type="text" placeholder="Sprinkles - true or false?" ng-model="ctrl.createForm.sprinkles"/>
+        <h3>Add a Donut</h3>
+        <input type="text" placeholder="Donut Name" ng-model="ctrl.createForm.name"/><br>
+        <input type="text" placeholder="Your Name" ng-model="ctrl.createForm.submittedBy"/><br>
+        <input type="text" placeholder="Ring or Filled?" ng-model="ctrl.createForm.type"/><br>
+        <input type="text" placeholder="Frosting - true or false?" ng-model="ctrl.createForm.frosting"/><br>
+        <input type="text" placeholder="Glazed - true or false?" ng-model="ctrl.createForm.glaze"/><br>
+        <input type="text" placeholder="Sprinkles - true or false?" ng-model="ctrl.createForm.sprinkles"/><br>
         <input type="submit" value="Create New Donut">
       </form>
 
       <table>
-        <tr ng-repeat="donut in ctrl.donuts"
+        <tr ng-repeat="donut in ctrl.donuts">
+        <p>{{donut.name}}</p>
           <td ng-mouseover="ctrl.chooseOneDonut(donut)"> {{ donut.name }} </td>
-          <td ng-click="ctrl.deleteDonut( Donut._id)">X</td>
+          <td ng-click="ctrl.deleteDonut( donut._id)">X</td>
           <td>{{ donut.likes }}</td>
-          <td ng-click="ctrl.likeDonut(donut)"><img src=url"https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td>
+          <!-- <td ng-click="ctrl.likeDonut(donut)"><img ng-src="https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td> -->
         </tr>
       </table>
 

@@ -1,7 +1,7 @@
 const app = angular.module('DonutsApp', []);
 //---------------------------
 
-app.controller('MainController', ['$http', function($http) {
+app.controller('donutsController', ['$http', function($http) {
 //---------------------------
   // this.test = "Hello world!";
   // console.log("App.JS is Connected");
