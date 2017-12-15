@@ -25,21 +25,25 @@
       <table>
         <tr ng-repeat="donut in ctrl.donuts">
         <p>{{donut.name}}</p>
-          <td ng-mouseover="ctrl.chooseOneDonut(donut)"> {{ donut.name }} </td>
+          <td ng-mouseover="ctrl.chooseOneDonut(donut)" ng-dblclick="ctrl.updateEaten(donut)"> {{ donut.name }} </td>
           <td ng-click="ctrl.deleteDonut( donut._id)">X</td>
           <td>{{ donut.likes }}</td>
           <!-- <td ng-click="ctrl.likeDonut(donut)"><img ng-src="https://image.flaticon.com/icons/png/512/184/184549.png" alt="donuticon"></td> -->
         </tr>
       </table>
 
-      <!-- <div class="details">
-         <h3>Donut Info:</h3>
-         <hr>
-         <h4> {{ ctrl.donut.name }} </h4>
-         <h6> <span> Likes:</span> {{ ctrl.donut.likes }}</h4>
-         <p><span> Submitted By: </span> {{ ctrl.donut.submittedBy }} </p>
+      <div class="details">
+        <h3>Donut Info:</h3>
+        <hr>
+        <h4> <span>Donut Name:<span> {{ ctrl.donut.name }} </h4>
+        <h6> <span> Submitted By: </span> {{ ctrl.donut.submittedBy }} </h6>
+        <h6> <span> Donut Type:</span> {{ ctrl.donut.type }}</h6>
+        <h6> <span> Frosting?:</span> {{ ctrl.donut.frosting }}</h6>
+        <h6> <span> Glazed?:</span> {{ ctrl.donut.glaze }}</h6>
+        <h6> <span> Sprinkles?:</span> {{ ctrl.donut.sprinkles }}</h6>
+        <h6> <span> Likes:</span> {{ ctrl.donut.likes }}</h6>
        </div>
-    </div> -->
+    </div>
 
 
 

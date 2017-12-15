@@ -62,21 +62,21 @@ app.controller('donutsController', ['$http', function($http) {
   }
 
 //Update donuts as eaten
-  // this.updateEaten = (donut) => {
-  //   console.log("Let's eat", donut.name, "!");
-  //   donut.eaten = !donut.eaten;
-  //   // console.log(holiday.celebrated);
-  //
-  //   $http({
-  //     method : 'PUT',
-  //     url : '/donuts/' + donut._id,
-  //     data : {eaten : donut.eaten}
-  //   }).then ( response => {
-  //     console.log(response.data.eaten);
-  //   }, error => {
-  //     console.log(error.message);
-  //   }).catch ( err => console.error ('Catch:', err))
-  // }
+  this.updateEaten = (donut) => {
+    console.log("Let's eat", donut.name, "!");
+    donut.eaten = !donut.eaten;
+    // console.log(holiday.celebrated);
+
+    $http({
+      method : 'PUT',
+      url : '/donuts/' + donut._id,
+      data : {eaten : donut.eaten}
+    }).then ( response => {
+      console.log(response.data.eaten);
+    }, error => {
+      console.log(error.message);
+    }).catch ( err => console.error ('Catch:', err))
+  }
 
   this.chooseOneDonut = (donut) => {
     this.donut = donut;
